@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta content="width=device-width , initial-scale=1.0" name="viewport">
-        <title>Namsi Portfolio</title>
+        <title>{% block title %}Namsi Portfolio{% endblock title %}</title>
         <meta content="" name="description">
         <meta content="" name="keywords">
 
@@ -30,6 +30,10 @@
 
         <body>
             <!-- =======Header ======-->
+            {% url 'portfoliodetail' %}
+            {% block content %}
+
+            
             <header id="header">
                 <div class="container">
                     <h1><a href="index.html">Namsi Lydia</a></h1>
@@ -327,7 +331,7 @@
                         <div class="portfolio-links">
                             <a href="{% static 'assets/img/deer.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox"
                              title="Agrivet App"><i class="bx bx-plus"></i></a>
-                             <a href="portfoliodetail.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Agrivet App"><i class="bx bx-link"></i></a>
+                             <a href= "{% url 'portfoliodetail'%}" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Agrivet App"><i class="bx bx-link"></i></a>
                             </div>
                     </div>
                 </div>
@@ -340,7 +344,7 @@
                     <p>Web</p>
                     <div class="portfolio-links">
                         <a href="{% static 'assets/img/deer.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web-dev"> <i class="bx bx-plus"></i></a>
-                        <a href="portfoliodetail.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Personal Porfolio"><i class="bx bx-link"></i></a>
+                        <a href="/website/templates/portfoliodetail.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Personal Porfolio"><i class="bx bx-link"></i></a>
 
                     </div>
                 </div>
@@ -354,7 +358,7 @@
                     <p>News App</p>
                 <div class="portfolio-links">
                     <a href="{% static 'assets/img/deer.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="News App"><i class="bx bx-plus"></i></a>
-                    <a href="portfoliodetail.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="News App"><i class="bx bx-link"></i></a>
+                    <a href="/website/templates/portfoliodetail.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="News App"><i class="bx bx-link"></i></a>
 
                 </div>
                 </div>
@@ -368,7 +372,7 @@
                 <p>Crm system</p>
                 <div class="portfolio-links">
                   <a href="{% static 'assets/img/deer.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="crm system"><i class="bx bx-plus"></i></a>
-                  <a href="portfoliodetail.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Crm system"><i class="bx bx-link"></i></a>
+                  <a href="/website/templates/portfoliodetail.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Crm system"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -460,6 +464,8 @@
 
      <!--Template js Files-->
      <script src="{% static 'assets/js/main.js' %}"></script>
+
+     {% endblock %}
 
     </body>
 
