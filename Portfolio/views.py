@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render 
+from .models import portfolioDetails
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
 
-def portfoliodetail(request):
-    return render(request,"portfoliodetail.html")
+    jobs=portfolioDetails.objects.all()
+
+    return render(request, 'index.html', {'jobs':jobs})
+
