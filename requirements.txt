@@ -3,5 +3,4 @@ backports.zoneinfo==0.2.1
 Django==4.1.7
 Pillow==9.4.0
 psycopg2-binary==2.9.5
-libpq-dev python3-dev
 sqlparse==0.4.3
