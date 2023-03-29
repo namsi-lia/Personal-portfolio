@@ -333,16 +333,16 @@
                 <h2>Portfolio</h2>
                 <p>My Work</p>
             </div>
-            {% for portfolioDetailss in jobs %}
+            {% for portfolioDetails in jobs %}
               
         <div class="row portfolio-container">
            
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div class="portfolio-wrap">
-                    <img class="card-img-top" src="{{ portfolioDetailss.image}}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ portfolioDetails.image}}" alt="Card image cap">
                     <div class="portfolio-info">
-                        <p>"{{portfolioDetailss.summary}}" </p>   
+                        <p>"{{portfolioDetails.summary}}" </p>   
                         <div class="portfolio-links">
                           </div>
                     </div>
