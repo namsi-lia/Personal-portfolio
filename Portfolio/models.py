@@ -7,7 +7,7 @@ class portfolioDetails(models.Model):
     #images
     image =models.ImageField(upload_to='static/assets/img')
     #summary
-    summary =models.CharField(max_length=255)
+    summary =models.CharField(max_length=254)
 
     #link to project
     #links = models.URLField(max_length=200)
