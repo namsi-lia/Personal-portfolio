@@ -2,11 +2,11 @@
 
 #Build the project
 echo "Building the project"
-python3.9 -m ip install -r requirements.txt
+python3.8 -m ip install -r requirements.txt
 
 echo "Make Migrations.."
-python3.9 manage.py makemigrations --noinput
-python3.9 manage.py migrate --noinut
+python3.8 manage.py makemigrations --noinput
+python3.8 manage.py migrate --noinut
 
 echo "collect Static .."
-python3.9 manage.py collectstatic --noinut --clear
+python3.8 manage.py collectstatic --noinut --clear
