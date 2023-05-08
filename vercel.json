@@ -1,10 +1,25 @@
 {
+	"version":2,
 	"builds":[{
 	     "src":"website/wsgi.py",
 	     "use":"@vercel/python",
 	     "config":{"maxLamdaSize": "15mb", "runtime":"python3.8" }
-	}],
-	 "routes":[{
+	},
+	{
+		"src":"build.sh",
+		"use":"@vercel/static-build",
+		"config":{
+			"distDir":"staticfiles_build"
+		}
+	}
+],
+	 "routes":[
+		{
+			"src":"/static/(.*)",
+			"dest":"website/wsgi.py"
+		}
+		,
+		{
 	 	  "src":"/(.*)",
 	 	  "dest":"website/wsgi.py"
 	 }]
